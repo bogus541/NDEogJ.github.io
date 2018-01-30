@@ -1,1 +1,0 @@
-# NDEogJ.github.io
