@@ -4,15 +4,18 @@
 figure.snip1081 {
   font-family: 'Raleway', Arial, sans-serif;
   color: #fff;
-  position: relative;
-  float: left;
   overflow: hidden;
-  margin: 10px 1%;
   min-width: 220px;
   max-width: 310px;
   width: 100%;
   text-align: center;
-  margin: center;
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 figure.snip1081 * {
   -webkit-box-sizing: border-box;
