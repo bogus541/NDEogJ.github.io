@@ -30,6 +30,10 @@ body{
   grid-column: 3;
   grid-row: 2/4;
 }
+.youtube{
+  grid-column: 1/4;
+  grid-rows: 2/4;
+}
 /*footer*//*footer*//*footer*//*footer*/
 
 .footer {
