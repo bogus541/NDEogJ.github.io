@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-
 body{
   background-color: #212121;
 	color: #fff;
@@ -9,34 +8,29 @@ body{
 }
 #content {
 	display: grid;
-	grid-template-columns: repeat(2fr 1fr 2fr 1fr 2fr);
-	grid-auto-rows: repeat(2fr 1fr 2fr 1fr 2fr);
-	grid-gap: 0px;
+	grid-template-columns: repeat(1fr, 3);
+	grid-auto-rows: repeat(1fr, 4);
 	margin: 0 auto;
-  grid-template-areas:
-  ". . 1 . ."
-  ". 2 . 3 ."
-  ". 2 . 3 ."
-  ". 2 . 3 ."
-  ". . 4 . .";
+  align-items: center;
+  justify-items: center;
 }
-#content > *{
-	padding: 30px;
+.header{
+  grid-column: 1/4;
+  grid-row: 1;
 }
-1 {
-  grid-area: 1;
+.one{
+  grid-column: 1;
+  grid-row: 2/4;
 }
-2 {
-  grid-area: 2;
+.two{
+  grid-column: 2;
+  grid-row: 2/4;
 }
-3 {
-  grid-area: 3;
+.three{
+  grid-column: 3;
+  grid-row: 2/4;
 }
-4 {
-  grid-area: 4;
-}
-
-/*footer*//*footer*//*footer*//*footer*//*footer*//*footer*/
+/*footer*//*footer*//*footer*//*footer*/
 
 .footer {
   position: fixed;
@@ -48,35 +42,30 @@ body{
   text-align: center;
   font-family: 'Noto Sans', sans-serif;
   font-size: 15px;
+  grid-column: 1/4;
+  grid-row: 4;
 }
-
 /*snip1081*//*snip1081*//*snip1081*//*snip1081*/
 
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 figure.snip1081 {
   font-family: 'Raleway', Arial, sans-serif;
   color: #fff;
+  position: relative;
   overflow: hidden;
-  min-width: 220px;
-  max-width: 310px;
+  margin: 10px 1%;
+  min-width: 320px;
+  max-width: 410px;
   width: 100%;
   text-align: center;
-  display: block;
-/*  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-*/
 }
 figure.snip1081 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: all 0.45s ease-in-out;
   transition: all 0.45s ease-in-out;
 }
 figure.snip1081 i {
-  background-color: #1a1a1a;
+  background: #212121;
   border-radius: 50%;
   color: #ffffff;
   display: inline-block;
@@ -97,6 +86,7 @@ figure.snip1081 figcaption:after {
   height: 14px;
   display: block;
   content: '';
+  transition: all 0.45s ease-in-out;
 }
 figure.snip1081 figcaption > p {
   font-weight: 500;
@@ -130,16 +120,16 @@ figure.snip1081 h2:after {
   content: "";
   height: 1px;
   left: 50%;
-  margin-left: -30px;
+  margin-left: -50px;
   bottom: -12px;
   position: absolute;
-  width: 60px;
+  width: 100px;
 }
 figure.snip1081 a {
-/*  left: 0;
+  left: 0;
   right: 0;
   top: 0;
-  bottom: 0;*/
+  bottom: 0;
   position: absolute;
 }
 figure.snip1081.blue i {
@@ -158,11 +148,10 @@ figure.snip1081:hover figcaption:after,
 figure.snip1081.hover figcaption:after,
 figure.snip1081:hover .header,
 figure.snip1081.hover .header {
-  background: #d65548;
+  background: #282828;
 }
 figure.snip1081:hover i,
 figure.snip1081.hover i {
-  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 figure.snip1081:hover.blue figcaption:after,
@@ -175,7 +164,7 @@ figure.snip1081:hover.red figcaption:after,
 figure.snip1081.hover.red figcaption:after,
 figure.snip1081:hover.red .header,
 figure.snip1081.hover.red .header {
-  background: #6d2018;
+  background: #822222;
 }
 figure.snip1081:hover.yellow figcaption:after,
 figure.snip1081.hover.yellow figcaption:after,
