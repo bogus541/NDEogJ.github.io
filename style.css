@@ -144,6 +144,9 @@ figure.snip1081.yellow i {
 figure.snip1081.navy i {
   background: #34495e;
 }
+figure.snip1081.green i {
+  background: #2aad32;
+}
 figure.snip1081:hover figcaption:after,
 figure.snip1081.hover figcaption:after,
 figure.snip1081:hover .header,
@@ -177,4 +180,10 @@ figure.snip1081.hover.navy figcaption:after,
 figure.snip1081:hover.navy .header,
 figure.snip1081.hover.navy .header {
   background: #10161c;
+}
+figure.snip1081:hover.green figcaption:after,
+figure.snip1081.hover.green figcaption:after,
+figure.snip1081:hover.green .header,
+figure.snip1081.hover.green .header {
+  background: #229222;
 }
