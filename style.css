@@ -17,8 +17,15 @@ body{
 	background-color: #212121;
 	color: #fff;
 	font-family: 'Nunito Semibold';
-	text-align: center;
-}
+	text-align: center;}
+
+/*-------------------------
+	links
+--------------------------*/
+
+links {
+	color: #006621;
+	text-decoration: none;}
 
 /*-------------------------
 	css grid
@@ -30,28 +37,22 @@ body{
 	grid-auto-rows: repeat(1fr, 4);
 	margin: 0 auto;
 	align-items: center;
-	justify-items: center;
-}
+	justify-items: center;}
 .header{
 	grid-column: 1/4;
-	grid-row: 1;
-}
+	grid-row: 1;}
 .one{
 	grid-column: 1;
-	grid-row: 2/4;
-}
+	grid-row: 2/4;}
 .two{
 	grid-column: 2;
-	grid-row: 2/4;
-}
+	grid-row: 2/4;}
 .three{
 	grid-column: 3;
-	grid-row: 2/4;
-}
+	grid-row: 2/4;}
 .youtube{
 	grid-column: 1/4;
-	grid-rows: 2/4;
-}
+	grid-rows: 2/4;}
 
 /*-------------------------
 	footer
@@ -68,8 +69,7 @@ body{
 	font-family: 'Noto Sans', sans-serif;
 	font-size: 15px;
 	grid-column: 1/4;
-	grid-row: 4;
-}
+	grid-row: 4;}
 
 /*-------------------------
 	snip1081
