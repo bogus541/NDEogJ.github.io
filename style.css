@@ -1,193 +1,191 @@
+
+/*-------------------------
+	fonts
+--------------------------*/
+
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu|Bungee+Shade|Ranchers);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+/*-------------------------
+	body
+--------------------------*/
+
 body{
-  background-color: #212121;
+	background-color: #212121;
 	color: #fff;
 	font-family: 'Nunito Semibold';
 	text-align: center;
 }
+
+/*-------------------------
+	css grid
+--------------------------*/
+
 #content {
 	display: grid;
 	grid-template-columns: repeat(1fr, 3);
 	grid-auto-rows: repeat(1fr, 4);
 	margin: 0 auto;
-  align-items: center;
-  justify-items: center;
+	align-items: center;
+	justify-items: center;
 }
 .header{
-  grid-column: 1/4;
-  grid-row: 1;
+	grid-column: 1/4;
+	grid-row: 1;
 }
 .one{
-  grid-column: 1;
-  grid-row: 2/4;
+	grid-column: 1;
+	grid-row: 2/4;
 }
 .two{
-  grid-column: 2;
-  grid-row: 2/4;
+	grid-column: 2;
+	grid-row: 2/4;
 }
 .three{
-  grid-column: 3;
-  grid-row: 2/4;
+	grid-column: 3;
+	grid-row: 2/4;
 }
 .youtube{
-  grid-column: 1/4;
-  grid-rows: 2/4;
+	grid-column: 1/4;
+	grid-rows: 2/4;
 }
-/*footer*//*footer*//*footer*//*footer*/
+
+/*-------------------------
+	footer
+--------------------------*/
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #3a3a3a;
-  color: white;
-  text-align: center;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 15px;
-  grid-column: 1/4;
-  grid-row: 4;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #3a3a3a;
+	color: white;
+	text-align: center;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 15px;
+	grid-column: 1/4;
+	grid-row: 4;
 }
-/*snip1081*//*snip1081*//*snip1081*//*snip1081*/
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+/*-------------------------
+	snip1081
+--------------------------*/
+
 figure.snip1081 {
-  font-family: 'Raleway', Arial, sans-serif;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
-  margin: 10px 1%;
-  min-width: 320px;
-  max-width: 410px;
-  width: 100%;
-  text-align: center;
-}
+	font-family: 'Raleway', Arial, sans-serif;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 410px;
+	width: 100%;
+	text-align: center;}
 figure.snip1081 * {
-  box-sizing: border-box;
-  transition: all 0.45s ease-in-out;
-}
+	box-sizing: border-box;
+	transition: all 0.45s ease-in-out;}
 figure.snip1081 i {
-  background: #212121;
-  border-radius: 50%;
-  color: #ffffff;
-  display: inline-block;
-  font-size: 40px;
-  height: 70px;
-  line-height: 70px;
-  width: 70px;
-  z-index: 1;
-  border: 2px solid #ffffff;
-}
+	background: #212121;
+	border-radius: 50%;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 40px;
+	height: 70px;
+	line-height: 70px;
+	width: 70px;
+	z-index: 1;
+	border: 2px solid #ffffff;}
 figure.snip1081 figcaption {
-  margin-top: -35px;
-}
+	margin-top: -35px;}
 figure.snip1081 figcaption:after {
-  border-radius: 0 0 8px 8px;
-  width: 100%;
-  background: #333333;
-  height: 14px;
-  display: block;
-  content: '';
-  transition: all 0.45s ease-in-out;
-}
+	border-radius: 0 0 8px 8px;
+	width: 100%;
+	background: #333333;
+	height: 14px;
+	display: block;
+	content: '';
+	transition: all 0.45s ease-in-out;}
 figure.snip1081 figcaption > p {
-  font-weight: 500;
-  background: #ffffff;
-  color: #333333;
-  padding: 30px 40px;
-}
+	font-weight: 500;
+	background: #ffffff;
+	color: #333333;
+	padding: 30px 40px;}
 figure.snip1081 .header {
-  border-radius: 8px 8px 0 0;
-  padding: 50px 15px;
-  background: #333333;
-}
+	border-radius: 8px 8px 0 0;
+	padding: 50px 15px;
+	background: #333333;}
 figure.snip1081 h2,
 figure.snip1081 p {
-  margin: 0;
-}
+	margin: 0;}
 figure.snip1081 p {
-  font-size: 0.9em;
-}
+	font-size: 0.9em;}
 figure.snip1081 h2 {
-  width: 100%;
-  display: block;
-  margin-bottom: 30px;
-  letter-spacing: -1px;
-  font-size: 30px;
-  text-transform: uppercase;
-  position: relative;
-}
+	width: 100%;
+	display: block;
+	margin-bottom: 30px;
+	letter-spacing: -1px;
+	font-size: 30px;
+	text-transform: uppercase;
+	position: relative;}
 figure.snip1081 h2:after {
-  background: #ededed none repeat scroll 0 0;
-  content: "";
-  height: 1px;
-  left: 50%;
-  margin-left: -50px;
-  bottom: -12px;
-  position: absolute;
-  width: 100px;
-}
+	background: #ededed none repeat scroll 0 0;
+	content: "";
+	height: 1px;
+	left: 50%;
+	margin-left: -50px;
+	bottom: -12px;
+	position: absolute;
+	width: 100px;}
 figure.snip1081 a {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-}
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: absolute;}
 figure.snip1081.blue i {
-  background: #2980b9;
-}
+	background: #2980b9;}
 figure.snip1081.red i {
-  background: #c0392b;
-}
+	background: #c0392b;}
 figure.snip1081.yellow i {
-  background: #e67e22;
-}
+	background: #e67e22;}
 figure.snip1081.navy i {
-  background: #34495e;
-}
+	background: #34495e;}
 figure.snip1081.green i {
-  background: #2aad32;
-}
+	background: #2aad32;}
 figure.snip1081:hover figcaption:after,
 figure.snip1081.hover figcaption:after,
 figure.snip1081:hover .header,
 figure.snip1081.hover .header {
-  background: #282828;
-}
+	background: #282828;}
 figure.snip1081:hover i,
 figure.snip1081.hover i {
-  transform: rotateY(180deg);
-}
+	transform: rotateY(180deg);}
 figure.snip1081:hover.blue figcaption:after,
 figure.snip1081.hover.blue figcaption:after,
 figure.snip1081:hover.blue .header,
 figure.snip1081.hover.blue .header {
-  background: #164666;
-}
+	background: #164666;}
 figure.snip1081:hover.red figcaption:after,
 figure.snip1081.hover.red figcaption:after,
 figure.snip1081:hover.red .header,
 figure.snip1081.hover.red .header {
-  background: #822222;
-}
+	background: #822222;}
 figure.snip1081:hover.yellow figcaption:after,
 figure.snip1081.hover.yellow figcaption:after,
 figure.snip1081:hover.yellow .header,
 figure.snip1081.hover.yellow .header {
-  background: #924d10;
-}
+	background: #924d10;}
 figure.snip1081:hover.navy figcaption:after,
 figure.snip1081.hover.navy figcaption:after,
 figure.snip1081:hover.navy .header,
 figure.snip1081.hover.navy .header {
-  background: #10161c;
-}
+	background: #10161c;}
 figure.snip1081:hover.green figcaption:after,
 figure.snip1081.hover.green figcaption:after,
 figure.snip1081:hover.green .header,
 figure.snip1081.hover.green .header {
-  background: #229222;
-}
+	background: #229222;}

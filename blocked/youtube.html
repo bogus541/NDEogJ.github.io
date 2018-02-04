@@ -1,71 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="../style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Clever | Applications</title>
-  <link rel="icon" href="https://clever.com/favicon.ico" type="image/gif" sizes="16x16">
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Ubuntu|Bungee+Shade|Ranchers);
-    body {
-      background-color: #212121;
-      color: #e6e6e6;
-      text-align: center;
-      font-size: 15px;
-    }
-    h1 {
-      font-family: 'Ubuntu', sans-serif;
-      font-size:  30px;
-      color: #ffffff;
-    }
-    a {
-    color: blue;
-    }
-    h3 {
-      font-family: 'Bungee Shade', cursive;
-      font-size: 50px;
-      color: #ffffff;
-      line-height: 30px;
-    }
-    h4 {
-      font-family: 'Ubuntu', sans-serif;
-      color: red;
-    }
-  </style>
-<!--Youtube Form Script-->
-  <script>
-    function process()
-    {
-    var url="https://www.youtube-nocookie.com/embed/" + document.getElementById("url").value;
-    location.href=url;
-    return false;
-    }
-  </script>
+	<link rel="stylesheet" href="../style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Clever | Applications</title>
+	<link rel="icon" href="https://clever.com/favicon.ico" type="image/gif" sizes="16x16">
+	<style>
+		body {
+			background-color: #212121;
+			color: #e6e6e6;
+			text-align: center;
+			font-size: 15px;}
+		links {
+			color: #006621;
+			text-decoration: none;}
+	</style>
 </head>
 <body>
-  <div id="content">
+	<div id="content">
 <!--Youtube-->
-    <h1>How to watch any Youtube video on any chromebook!</1>
-    <h1>Step 1:</h1>
-    <h2>Search for a video on <a href = "https://www.google.com/videohp?hl=en"; target="_blank">Google Video's</a></h2>
-    <h1>Step 2:</h1>
-    <h2>Copy the code after <a style="text-decoration: none; color: #006621"; href = "">https://www.youtube.com/watch?v=</a></h2>
-    <h1>Step 3:</h1>
-    <h2>Paste Code Below</h2>
-    <form onSubmit="return process();">
-    <a style="text-decoration: none; color: #006621; font-size: 20px;"; href = "">https://www.youtube.com/watch?v=</a><input type="text" name="url" id="url"> <input type="submit" value="Watch!" target="_blank">
-    </form>
-</body>
-</head>
-<body>
+		<div class="youtube">
+<!--Google Video Search-->
+			<h2>Search</h2>
+			<form action="https://www.google.com/search?tbm=vid&q=" class="searchform" method="get" name="searchform" target="_blank">
+			<input name="sitesearch" type="hidden" value="www.youtube.com/watch">
+			<input autocomplete="on" class="form-controls search" name="q" placeholder="Search For A Video" required="required" type="text">
+			<button class="button" type="submit">Search</button>
+			</form>
+<!--Youtube Form Script-->
+			<script>
+				function process(){
+				var url="https://www.youtube-nocookie.com/embed/" + document.getElementById("url").value; location.href=url; return false;}
+			</script>
+<!--Youtube Form-->
+			<h2>Watch</h2>
+			<form onSubmit="return process();">
+			<input type="text" name="url" placeholder="Put Code Here" id="url">
+			<input type="submit" value="Watch">
+		</form>
+		</div>
 <!--Footer-->
-    <div class="footer">
-      <p>
-        This site is purely for educational purposes only.
-        I do not condone the use of this site.
-        I am not responsible for any consequences received from the use of this site.
-      </p>
-    </div>
-  </div>
+		<div class="footer">
+			<p>
+				This site is purely for educational purposes only.
+				I do not condone the use of this site.
+				I am not responsible for any consequences received from the use of this site.
+			</p>
+		</div>
+	</div>
 </body>
 </html>
