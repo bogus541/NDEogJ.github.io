@@ -56,6 +56,27 @@
 				</figcaption>
 			</figure>
 		</div>
+<!--Youtube-->
+		<div class="youtube">
+<!--Google Video Search-->
+			<h2>Search</h2>
+			<form action="https://www.google.com/search?tbm=vid&q=" class="searchform" method="get" name="searchform" target="_blank">
+			<input name="sitesearch" type="hidden" value="www.youtube.com/watch">
+			<input autocomplete="on" class="form-controls search" name="q" placeholder="Search For A Video" required="required" type="text">
+			<button class="button" type="submit">Search</button>
+			</form>
+<!--Youtube Form Script-->
+			<script>
+				function process(){
+				var url="https://www.youtube-nocookie.com/embed/" + document.getElementById("url").value; location.href=url; return false;}
+			</script>
+<!--Youtube Form-->
+			<h2>Watch</h2>
+			<form onSubmit="return process();">
+			<input type="text" name="url" placeholder="Put Code Here" id="url">
+			<input type="submit" value="Watch">
+		</form>
+		</div>
 <!--Footer-->
 		<div class="footer">
 			<p>
