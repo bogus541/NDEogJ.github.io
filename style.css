@@ -3,29 +3,20 @@
 	fonts
 --------------------------*/
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url(https://fonts.googleapis.com/css?family=Roboto|Raleway:400,500,800);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu|Bungee+Shade|Ranchers);
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Muli);
 
 /*-------------------------
 	body
 --------------------------*/
 
-body{
+body, p, h3{
 	background-color: #212121;
 	color: #fff;
-	font-family: 'Nunito Semibold';
-	text-align: center;}
-
-/*-------------------------
-	links
---------------------------*/
-
-links {
-	color: #006621;
-	text-decoration: none;}
+	font-family: 'Ubuntu';}
 
 /*-------------------------
 	css grid
@@ -33,26 +24,10 @@ links {
 
 #content {
 	display: grid;
-	grid-template-columns: repeat(1fr, 3);
-	grid-auto-rows: repeat(1fr, 4);
 	margin: 0 auto;
+	grid-template-rows: 4;
 	align-items: center;
-	justify-items: center;}
-.header{
-	grid-column: 1/4;
-	grid-row: 1;}
-.one{
-	grid-column: 1;
-	grid-row: 2/4;}
-.two{
-	grid-column: 2;
-	grid-row: 2/4;}
-.three{
-	grid-column: 3;
-	grid-row: 2/4;}
-.youtube{
-	grid-column: 1/4;
-	grid-rows: 2/4;}
+    justify-items: center;}
 
 /*-------------------------
 	footer
@@ -69,123 +44,164 @@ links {
 	font-family: 'Noto Sans', sans-serif;
 	font-size: 15px;
 	grid-column: 1/4;
-	grid-row: 4;}
+    grid-row: 4;}
 
 /*-------------------------
-	snip1081
+	videos
+--------------------------*/
+#videos, #videos p, #videos h3 {
+list-style: none;
+margin:0;
+padding:15;
+}
+
+#videos > li, #videos > li > .image{
+  float:left;
+  margin-right:15px;
+}
+
+/*-------------------------
+	snip1217
 --------------------------*/
 
-figure.snip1081 {
+.snip1217 {
 	font-family: 'Raleway', Arial, sans-serif;
-	color: #fff;
-	position: relative;
-	overflow: hidden;
-	margin: 10px 1%;
-	min-width: 320px;
-	max-width: 410px;
-	width: 100%;
-	text-align: center;}
-figure.snip1081 * {
-	box-sizing: border-box;
-	transition: all 0.45s ease-in-out;}
-figure.snip1081 i {
-	background: #212121;
-	border-radius: 50%;
-	color: #ffffff;
-	display: inline-block;
-	font-size: 40px;
-	height: 70px;
-	line-height: 70px;
-	width: 70px;
-	z-index: 1;
-	border: 2px solid #ffffff;}
-figure.snip1081 figcaption {
-	margin-top: -35px;}
-figure.snip1081 figcaption:after {
-	border-radius: 0 0 8px 8px;
-	width: 100%;
-	background: #333333;
-	height: 14px;
-	display: block;
-	content: '';
-	transition: all 0.45s ease-in-out;}
-figure.snip1081 figcaption > p {
-	font-weight: 500;
-	background: #ffffff;
-	color: #333333;
-	padding: 30px 40px;}
-figure.snip1081 .header {
-	border-radius: 8px 8px 0 0;
-	padding: 50px 15px;
-	background: #333333;}
-figure.snip1081 h2,
-figure.snip1081 p {
-	margin: 0;}
-figure.snip1081 p {
-	font-size: 0.9em;}
-figure.snip1081 h2 {
-	width: 100%;
-	display: block;
-	margin-bottom: 30px;
-	letter-spacing: -1px;
-	font-size: 30px;
+	text-align: center;
 	text-transform: uppercase;
-	position: relative;}
-figure.snip1081 h2:after {
-	background: #ededed none repeat scroll 0 0;
-	content: "";
-	height: 1px;
-	left: 50%;
-	margin-left: -50px;
-	bottom: -12px;
+	font-weight: 500;
+	letter-spacing: 1px;}
+.snip1217 * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;}
+.snip1217 li {
+	display: inline-block;
+	list-style: outside none none;
+	margin: 0.5em 1.5em;
+	padding: 0;}
+.snip1217 a {
+	padding: 0.3em 0;
+	color: rgba(255, 255, 255, 0.5);
+	position: relative;
+	text-decoration: none;
+	display: inline-block;}
+.snip1217 a:before,
+.snip1217 a:after {
+	height: 3px;
 	position: absolute;
-	width: 100px;}
-figure.snip1081 a {
-	left: 0;
-	right: 0;
+	content: '';
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+	background-color: #0066ff;
+	width: 0;}
+.snip1217 a:before {
 	top: 0;
+	left: 0;}
+.snip1217 a:after {
 	bottom: 0;
-	position: absolute;}
-figure.snip1081.blue i {
-	background: #2980b9;}
-figure.snip1081.red i {
-	background: #c0392b;}
-figure.snip1081.yellow i {
-	background: #e67e22;}
-figure.snip1081.navy i {
-	background: #34495e;}
-figure.snip1081.green i {
-	background: #2aad32;}
-figure.snip1081:hover figcaption:after,
-figure.snip1081.hover figcaption:after,
-figure.snip1081:hover .header,
-figure.snip1081.hover .header {
-	background: #282828;}
-figure.snip1081:hover i,
-figure.snip1081.hover i {
-	transform: rotateY(180deg);}
-figure.snip1081:hover.blue figcaption:after,
-figure.snip1081.hover.blue figcaption:after,
-figure.snip1081:hover.blue .header,
-figure.snip1081.hover.blue .header {
-	background: #164666;}
-figure.snip1081:hover.red figcaption:after,
-figure.snip1081.hover.red figcaption:after,
-figure.snip1081:hover.red .header,
-figure.snip1081.hover.red .header {
-	background: #822222;}
-figure.snip1081:hover.yellow figcaption:after,
-figure.snip1081.hover.yellow figcaption:after,
-figure.snip1081:hover.yellow .header,
-figure.snip1081.hover.yellow .header {
-	background: #924d10;}
-figure.snip1081:hover.navy figcaption:after,
-figure.snip1081.hover.navy figcaption:after,
-figure.snip1081:hover.navy .header,
-figure.snip1081.hover.navy .header {
-	background: #10161c;}
-figure.snip1081:hover.green figcaption:after,
-figure.snip1081.hover.green figcaption:after,
-figure.snip1081:hover.green .header,
-figure.snip1081.hover.green .header {
-	background: #229222;}
+	right: 0;}
+.snip1217 a:hover,
+.snip1217 .current a {
+	color: #ffffff;}
+.snip1217 a:hover:before,
+.snip1217 .current a:before,
+.snip1217 a:hover:after,
+.snip1217 .current a:after {
+	width: 100%;}
+
+/*-------------------------
+	snip1488
+--------------------------*/
+
+.snip1488 {
+  font-family: 'Roboto', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  cursor: pointer;}
+.snip1488 * {
+  box-sizing: border-box;}
+.snip1488 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0.5em 1em;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;}
+.snip1488 li:before,
+.snip1488 li:after {
+  display: block;}
+.snip1488 li:before {
+  bottom: 0%;}
+.snip1488 li:after {
+  bottom: 50%;}
+.snip1488 a {
+  backface-visibility: hidden;
+  color: #e6e6e6;
+  display: block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;}
+.snip1488 a:hover {
+  color: #ffffff;}
+.snip1488 a:before {
+  bottom: 25%;}
+.snip1488 a:after {
+  bottom: 75%;}
+.snip1488 li:before,
+.snip1488 li:after,
+.snip1488 a:before,
+.snip1488 a:after {
+  background-color: #0066ff;
+  position: absolute;
+  height: 25%;
+  left: 50%;
+  right: 50%;
+  content: '';
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;}
+.snip1488 li:before {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;}
+.snip1488 li:after {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;}
+.snip1488 a:before {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;}
+.snip1488 a:after {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;}
+.snip1488 li:hover:before,
+.snip1488 li.current:before,
+.snip1488 li:hover:after,
+.snip1488 li.current:after,
+.snip1488 li:hover a:before,
+.snip1488 li.current a:before,
+.snip1488 li:hover a:after,
+.snip1488 li.current a:after {
+  left: 0;
+  right: 0;
+  opacity: 1;}
+.snip1488 li:hover:before,
+.snip1488 li.current:before {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;}
+.snip1488 li:hover:after,
+.snip1488 li.current:after {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;}
+.snip1488 li:hover a:before,
+.snip1488 li.current a:before {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;}
+.snip1488 li:hover a:after,
+.snip1488 li.current a:after {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;}
