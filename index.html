@@ -1,37 +1,61 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
+
 <head>
-	<link rel="stylesheet" href="style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
 	<title>Clever | Applications</title>
 	<link rel="icon" href="https://clever.com/favicon.ico" type="image/gif" sizes="16x16">
+	<meta name="bogus541" content="bogus541">
+	<script src="brython.js"></script>
+	<script src="brython_stdlib.js"></script>
+	<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<body onload="brython()">
 	<div id="content">
-<!--Youtube-->
+		<ul class="snip1217">
+			<li class="current"><a href="#">Home</a></li>
+			<li><a href="#">Github</a></li>
+			<li><a href="#">Multiplayer</a></li>
+			<li><a href="#">WebGL</a></li>
+			<li><a href="#">Other</a></li>
+			<li><a href="#">About</a></li>
+		</ul>
 		<div class="youtube">
-<!--Google Video Search-->
-    			<h2 style="color: green;">NEW!!!</h2>
-    			<h3 style="color: blue;"><a href="https://webcache.googleusercontent.com/search?q=cache:Ns4WfJHh1QUJ:https://www.ifixit.com/Answers/View/231737/How%2Bcan%2BI%2Breset%2Ba%2Bmanaged%2Bchrome%2Bbook%2Bback%2Bto%2Bfactory+&amp;cd=1&amp;hl=en&amp;ct=clnk&amp;gl=us">I am releasing how to fully unblock almost any chromebook(unpachable)</a></h3> 
-			<h2>Search</h2>
-			<form action="https://www.google.com/search?tbm=vid&q=" class="searchform" method="get" name="searchform" target="_blank">
-			<input name="sitesearch" type="hidden" value="www.youtube.com/watch">
-			<input autocomplete="on" class="form-controls search" name="q" placeholder="Search For A Video" required="required" type="text">
-			<button class="button" type="submit">Search</button>
-			</form>
-<!--Youtube Form Script-->
-			<script>
-				function process(){
-				var url="https://www.youtube-nocookie.com/embed/" + document.getElementById("url").value; location.href=url; return false;}
+			<script type="text/python">
+from browser import document as doc
+from browser import ajax, html
+from urllib.parse import quote
+import json
+def on_complete(req):
+    if req.status==200 or req.status==0:
+        print(req.text)
+        data = req.text
+        cont = json.loads(data)
+        videos = []
+        for video_result in cont.get('items', []):
+            title = video_result['snippet']['title']
+            description = video_result['snippet']['description']
+            id = video_result['id']['videoId']
+            img = video_result['snippet']['thumbnails']['medium']['url']
+            link = f'https://www.youtube-nocookie.com/embed/{id}'
+            videos.append(f'<li><a href="{link}" class="image"><img src="{img}"/></a><div class="content"><a href="{link}"><h3>{title}</h3><p>{description}</p></a></div></li>')
+	doc["main"].html = f'<ul id="videos">{"<br>".join(videos)}</ul>'
+
+def get(url):
+    req = ajax.ajax()
+    req.bind('complete',on_complete)
+    req.open('GET',url,True)
+    req.set_header('content-type','application/x-www-form-urlencoded')
+    req.send()
+def search():
+    get('https://www.googleapis.com/youtube/v3/search?part=snippet&q=' + quote(input('Search For A Video:')) + '&type=video&key=AIzaSyAqR6xo2RuEiYDjp10UI3dPtiw-q7scJsI&maxResults=10&videoEmbeddable=True')
+doc["search"].bind("click", search)
 			</script>
-<!--Youtube Form-->
-			<h2>Watch</h2>
-			<form onSubmit="return process();">
-			<input type="text" name="url" placeholder="Put Code Here" id="url">
-			<input type="submit" value="Watch">
-		</form>
+			<pre id="main"><ul class="snip1488" id="search"><li><a type="button" class="search" onclick="search()">Search</a></li></ul></pre>
 		</div>
-<!--Footer-->
+		<!--Footer-->
 		<div class="footer">
 			<p>
 				This site is purely for educational purposes only.
@@ -41,4 +65,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
