@@ -109,16 +109,20 @@ MM88MMM  ,adPPYba,    ,adPPYba,  MM88MMM  ,adPPYba,  8b,dPPYba,
   `8b,d8'    88  "8a,   ,d88  "8b,   ,aa  "8a,   ,a8"  aa    ]8I
     "8"      88   `"8bbdP"Y8   `"Ybbd8"'   `"YbbdP"'   `"YbbdP"'
 */
-#videos, #videos p, #videos h3 {
+#videos, #videos p, #videos h3, #videos a {
     list-style: none;
     margin: 0;
     padding: 15;
     color: #fff;
     display: block;
+    text-align: center;
     white-space: pre-wrap;
     text-decoration: none;
     font-family: 'Ubuntu';}
-#videos>li, #videos>li>.image {
+#videos li{
+    width: 100%;
+}
+#videos li, #videos li .image {
     float: left;
     margin-right: 25px;
     margin-bottom: 15px;}

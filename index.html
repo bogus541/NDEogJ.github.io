@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
-<body onload="brython()">
+<body onload="brython({debug:0})">
     <div id="content">
         <ul class="snip1217">
             <li class="current"><a href="javascript:window.location.reload(true)">Home</a></li>
@@ -24,10 +24,8 @@
         <div class="youtube">
             <script type="text/python">
 from browser import document as doc
-from browser import ajax, html
+from browser import ajax, html, window
 import json
-def searchi():
-    print(1)
 def searchv():
     get('https://www.googleapis.com/youtube/v3/search?q=' + input('Search For A Video:') + '&type=video&part=snippet&videoEmbeddable=True&key=AIzaSyAqR6xo2RuEiYDjp10UI3dPtiw-q7scJsI&maxResults=10')
 def searchc():
@@ -40,16 +38,20 @@ def on_complete(req):
         videos = []
         for video_result in cont.get('items', []):
             title = video_result['snippet']['title']
-            description = video_result['snippet']['description'] + '                                                                                                                                                                                                                                                                        '
+            description = video_result['snippet']['description'] + '\n                                                                                                                                                                                                                                               '
             img = video_result['snippet']['thumbnails']['medium']['url']
             if video_result['id']['kind'] == 'youtube#video':
                 id = video_result['id']['videoId']
                 link = f'https://www.youtube-nocookie.com/embed/{id}'
-                videos.append(f'<li><a href="{link}" target="_blank" class="image"><img src="{img}"/></a><div class="content"><a href="{link}" target="_blank"><h3>{title}</h3><p>{description}</p></a></div></li>')
+                videos.append(f'<li><a href="{link}" target="_blank" class="image"><img src="{img}"/></a><div><a href="{link}" target="_blank"><h3>{title}</h3><p>{description}</p></a></div></li>')
             elif video_result['id']['kind'] == 'youtube#channel':
                 id = video_result['id']['channelId']
-                videos.append(f'<li id="searchi"><a type="button" class="image"><img src="{img}"/></a><div class="content"><a id="searchi" type="button"><h3>{title}</h3><p>{description}</p></a></div></li>')
+                videos.append(f'<li><a type="button" class="image" onclick="searchi(String({id}))"><img src="{img}"/></a><div><a type="button"><h3>{title}</h3><p>{description}</p></a></div></li>')
+    def searchi(inpp):
+        print(inpp)
+    window.searchi = searchi
     doc["main"].html = f'<ul id="videos">{"<br/>".join(videos)}</ul>'
+    doc["test"].bind("click", searchi)
 def get(url):
     req = ajax.ajax()
     req.bind('complete',on_complete)
@@ -63,6 +65,7 @@ doc["searchc"].bind("click", searchc)
             <pre id="main"></i></pre>
         </div>
         <!--Footer-->
+        <br>
         <div class="footer">
             <p>
                 This site is purely for educational purposes only.
