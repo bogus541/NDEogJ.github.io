@@ -49,6 +49,11 @@ def on_complete(req):
             if video_result['id']['kind'] == 'youtube#video':
                 id = video_result['id']['videoId']
                 link = f'https://www.youtube-nocookie.com/embed/{id}'
+                print(title)
+                print(description)
+                print(img)
+                print(id)
+                print(link)
                 videos.append(f'<li><a href="{link}" target="_blank" class="image"><img src="{img}"/></a><div><a href="{link}" target="_blank"><h3>{title}</h3><p>{description}</p></a></div></li>')
             elif video_result['id']['kind'] == 'youtube#channel':
                 id = video_result['id']['channelId']
