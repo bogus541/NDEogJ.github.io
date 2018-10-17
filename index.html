@@ -54,7 +54,7 @@ def on_complete(req):
                 id = video_result['id']['channelId']
                 videos.append(f'<li><a type="button" class="image" onclick="searchi(String(/{id}/))"><img src="{img}"/></a><div><a type="button" onclick="searchi(String(/{id}/))"><h3>{title}</h3><p>{description}</p></a></div></li>')
     def searchi(inpp):
-        get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={inpp.replace("/", "")}&maxResults=10&q=' + input('Search For A Video:') + '&type=video&videoEmbeddable=true&fields=items(id(kind%2CvideoId)%2Csnippet(description%2Cthumbnails%2Fmedium%2Ctitle))&key=AIzaSyAqR6xo2RuEiYDjp10UI3dPtiw-q7scJsI')
+        get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={inpp.replace("/", "")}&maxResults=10&q=' + input('Search For A Video:') + '&type=video&videoEmbeddable=true&key=AIzaSyAqR6xo2RuEiYDjp10UI3dPtiw-q7scJsI')
     window.searchi = searchi
     doc["main"].html = f'<ul id="videos">{"<br/>".join(videos)}</ul>'
 doc["main"].html = '<ul class="snip1488" id="searchv"><li><a type="button">Search For A Video</a></li></ul><ul class="snip1488" id="searchc"><li><a type="button">Search For A Channel</a></li></ul>'
