@@ -42,6 +42,7 @@ def on_complete(req):
         print(req.text)
         data = req.text
         cont = json.loads(data)
+        videos = []
         for video_result in cont.get('items', []):
             title = video_result['snippet']['title']
             description = video_result['snippet']['description'] + '\n                                                                                                                                                                                                                                               '
@@ -62,6 +63,7 @@ def on_complete(req):
         get(f'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={inpp.replace("/", "")}&maxResults=10&q=' + input('Search For A Video:') + '&type=video&videoEmbeddable=true&key=AIzaSyAqR6xo2RuEiYDjp10UI3dPtiw-q7scJsI')
     window.searchi = searchi
     doc["main"].html = f'<ul id="videos">{"<br/>".join(videos)}</ul>'
+doc["main"].html = ''
 doc["main"].html = '<ul class="snip1488" id="searchv"><li><a type="button">Search For A Video</a></li></ul><ul class="snip1488" id="searchc"><li><a type="button">Search For A Channel</a></li></ul>'
 doc["searchv"].bind("click", searchv)
 doc["searchc"].bind("click", searchc)
