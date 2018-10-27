@@ -28,9 +28,48 @@ MM88MMM  ,adPPYba,   8b,dPPYba,  MM88MMM
 */
 body {
     background-color: #212121;
-    color: #fff;
     font-family: 'Ubuntu';
+    text-decoration: none;
+    color: #fff;
     text-align: center;}
+/*
+            88
+            88                                       ,d
+            88                                       88
+,adPPYYba,  88,dPPYba,    ,adPPYba,   88       88  MM88MMM
+""     `Y8  88P'    "8a  a8"     "8a  88       88    88
+,adPPPPP88  88       d8  8b       d8  88       88    88
+88,    ,88  88b,   ,a8"  "8a,   ,a8"  "8a,   ,a88    88,
+`"8bbdP"Y8  8Y"Ybbd8"'    `"YbbdP"'    `"YbbdP'Y8    "Y888
+*/
+about, about a {
+    font-family: 'Ubuntu';
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;}
+about a, about a:visited {
+    text-decoration: none;
+    position: relative;
+    color: rgba(255, 255, 255, 0.5);}
+about a:hover, about a:visited:hover {
+    color: #fff;
+    transition: 0.4s;}
+about a:after, about a:visited:after {
+    content: '';
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: #0066ff;
+    transition: 0.4s;}
+about a:hover:after, about a:visited:hover:after {
+    width: 100%;}
+about a.block, about a:visited.block {
+    display: block;
+    padding: 0.5em;}
+about a.block:hover, about a:visited.block:hover {
+    background: #fff;}
 /*
 88   88
 88   ""               ,d
@@ -167,7 +206,7 @@ MM88MMM  ,adPPYba,    ,adPPYba,  MM88MMM  ,adPPYba,  8b,dPPYba,
     bottom: 0;
     right: 0;}
 .snip1217 a:hover, .snip1217 .current a {
-    color: #ffffff;}
+    color: #fff;}
 .snip1217 a:hover:before, .snip1217 .current a:before,
 .snip1217 a:hover:after, .snip1217 .current a:after {
     width: 100%;
