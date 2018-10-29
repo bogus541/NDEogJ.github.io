@@ -14,7 +14,7 @@
     })(window,document,'script','dataLayer','GTM-T4BNVC7');</script>
 <!-- End Google Tag Manager -->
     <link rel="stylesheet" type="text/css" href="beta.css">
-    <script src="brython.js"></script>
+    <script src="https://ndeogj.github.io/brython.js"></script>
     <script src="https://cdn.rawgit.com/brython-dev/brython/3.6.2/www/src/brython_stdlib.js"></script>
 </head>
 
@@ -62,7 +62,13 @@ def on_complete(req):
             if video_result['id']['kind'] == 'youtube#video':
                 id = video_result['id']['videoId']
                 link = f'https://www.youtube-nocookie.com/embed/{id}'
-                print(f'{id} -- Video -- {title}')
+                print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+                print('Title - ' + video_result['snippet']['title'])
+                print('Desc  - ' + video_result['snippet']['description'])
+                print('Date  - ' + video_result['snippet']['publishedAt'])
+                print('C ID  - ' + video_result['snippet']['channelId'])
+                print('V ID  - ' + video_result['id']['videoId'])
+                print('Img   - ' + video_result['snippet']['thumbnails']['medium']['url'])
                 videos.append(f'<li><a href="#{id}" class="image"><img src="{img}"/></a><div><a href="#{id}"><h3>{title}</h3><p>{description}</p></a></div></li>')
                 videos.append(f'<div id="{id}" class="overlay"><div class="popup"><h2>{title}</h2><a class="close" href="javascript:window.location.reload(true)">&times;</a><div class="container"><iframe src="{link}" frameborder="0" allowfullscreen class="video"></iframe></div></div></div></div>')
             elif video_result['id']['kind'] == 'youtube#channel':
