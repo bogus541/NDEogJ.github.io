@@ -49,17 +49,16 @@ about, about a {
     text-decoration: none;
     position: relative;
     display: inline;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.4);
     text-align: center;}
 about a, about a:visited {
     text-decoration: none;
-    position: relative;
-    color: rgba(255, 255, 255, 0.5);}
+    position: relative;}
 about a:hover, about a:visited:hover {
     color: #ffffff;
     transition: 1s;}
 about a:not(hover), about a:visited:not(hover) {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     transition: 1s;}
 about a:after, about a:visited:after {
     content: '';
