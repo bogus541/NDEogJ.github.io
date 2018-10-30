@@ -1,0 +1,294 @@
+/*
+   ad88
+  d8"                              ,d
+  88                               88
+MM88MMM  ,adPPYba,   8b,dPPYba,  MM88MMM
+  88    a8"     "8a  88P'   `"8a   88
+  88    8b       d8  88       88   88
+  88    "8a,   ,a8"  88       88   88,
+  88     `"YbbdP"'   88       88   "Y888
+*/
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+/*
+88                                 88
+88                                 88
+88                                 88
+88,dPPYba,    ,adPPYba,    ,adPPYb,88  8b       d8
+88P'    "8a  a8"     "8a  a8"    `Y88  `8b     d8'
+88       d8  8b       d8  8b       88   `8b   d8'
+88b,   ,a8"  "8a,   ,a8"  "8a,   ,d88    `8b,d8'
+8Y"Ybbd8"'    `"YbbdP"'    `"8bbdP"Y8      Y88'
+                                           d8'
+                                          d8'
+*/
+body {
+    background: #212121;
+    text-align: center;
+    font-family: 'Ubuntu';
+    color: #fefefe;}
+/*
+                         88           88
+                         ""           88
+                                      88
+ ,adPPYb,d8  8b,dPPYba,  88   ,adPPYb,88
+a8"    `Y88  88P'   "Y8  88  a8"    `Y88
+8b       88  88          88  8b       88
+"8a,   ,d88  88          88  "8a,   ,d88
+ `"YbbdP"Y8  88          88   `"8bbdP"Y8
+ aa,    ,88
+  "Y8bbdP"
+*/
+.grid-container {
+    display: grid;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 10% 22% 10% 20% 20% 8%;
+    grid-template-areas:
+        "...... header header header ......"
+        "...... ...... ...... ...... ......"
+        "...... form   form   form   ......"
+        "...... ...... ...... ...... ......"
+        "...... about  about  about  ......"
+        "...... about  about  about  ......"
+        "footer footer footer footer footer";}
+.grid-form-container {
+    display: grid;
+    grid-area: form;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-areas:
+    "vorc search option";}
+.center {
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;}
+.grid-header {grid-area: header;}
+.grid-vorc {grid-area: vorc;}
+.grid-search {grid-area: search;}
+.grid-option {grid-area: option;}
+.grid-about {grid-area: about;}
+.grid-footer {grid-area: footer; align-self: end;}
+/*
+8b       d8   ,adPPYba,   8b,dPPYba,   ,adPPYba,
+`8b     d8'  a8"     "8a  88P'   "Y8  a8"     ""
+ `8b   d8'   8b       d8  88          8b
+  `8b,d8'    "8a,   ,a8"  88          "8a,   ,aa
+    "8"       `"YbbdP"'   88           `"Ybbd8"'
+*/
+.switch {
+    position: relative;
+    height: 30px;
+    width: 120px;
+    margin-left: 130px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 13px;}
+.switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 58px;
+    line-height: 30px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.35);
+    text-align: center;
+    cursor: pointer;}
+.switch-label-v {padding-left: 2px;}
+.switch-label-c {padding-right: 2px;}
+.switch-input {display: none;}
+.switch-input:checked + .switch-label {
+    color: #fefefe;
+    transition: 0.15s ease-out;}
+.switch-input:checked + .switch-label-c ~
+.switch-selection {
+    left: 60px;}
+.switch-selection {
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 2px;
+    display: block;
+    width: 58px;
+    height: 25px;
+    border-radius: 13px;
+    transition: left 0.15s ease-out;
+    background-color: #0066ff;}
+/*
+                                                           88
+                                                           88
+                                                           88
+,adPPYba,   ,adPPYba,  ,adPPYYba,  8b,dPPYba,   ,adPPYba,  88,dPPYba,
+I8[    ""  a8P_____88  ""     `Y8  88P'   "Y8  a8"     ""  88P'    "8a
+ `"Y8ba,   8PP"""""""  ,adPPPPP88  88          8b          88       88
+aa    ]8I  "8b,   ,aa  88,    ,88  88          "8a,   ,aa  88       88
+`"YbbdP"'   `"Ybbd8"'  `"8bbdP"Y8  88           `"Ybbd8"'  88       88
+*/
+.material-textfield {
+    display: inline-block;
+    height: 4rem;
+    padding-top: 2rem;}
+.material-textfield input {
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    padding: 10px;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 1.5rem;
+    padding: .25rem 2.1rem;
+    width: 100%;
+    text-align: center;}
+.material-textfield input:invalid {box-shadow: none;}
+.material-textfield input:focus {outline: none;}
+.material-textfield label {
+    display: inline-block;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 0%;
+    pointer-events: none;
+    position: relative;
+    width: 100%;}
+.material-textfield label::before {
+    content: attr(data-content);
+    position: relative;
+    transition: all 0.4s ease;}
+.material-textfield label::after {
+    bottom: 1.3rem;
+    content: "";
+    height: 0.4rem;
+    left: 50%;
+    border-radius: 25px;
+    position: absolute;
+    transition: all 0.4s ease;
+    width: 0%;}
+.material-textfield label::before,
+.material-textfield input[required]:focus ~ label::before {
+    font-size: 0.85rem;
+    top: -4.25rem;}
+.material-textfield input:focus ~ label::after {
+    left: 0%;
+    bottom: 1rem;
+    width: 100%;}
+.material-textfield input:invalid ~ label::before {
+    font-size: 1.25rem;
+    top: -3rem;}
+.material-textfield input {
+    border-bottom: 0.2rem solid #0066ff;
+    color: #0066ff;}
+.material-textfield label::after {background: #0066ff;}
+.material-textfield label::before,
+.material-textfield input[required]:focus ~ label::before {color: #0066ff;}
+.material-textfield input:invalid ~ label::before {color: #0066ff;}
+/*
+                                  88
+                                  88
+                                  88
+ ,adPPYba,   8b,dPPYba,   ,adPPYb,88   ,adPPYba,  8b,dPPYba,
+a8"     "8a  88P'   "Y8  a8"    `Y88  a8P_____88  88P'   "Y8
+8b       d8  88          8b       88  8PP"""""""  88
+"8a,   ,a8"  88          "8a,   ,d88  "8b,   ,aa  88
+ `"YbbdP"'   88           `"8bbdP"Y8   `"Ybbd8"'  88
+*/
+.radio-buttons {
+    position: relative;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 50px;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;}
+.radio-buttons input[type="radio"] {display: none;}
+.radio-buttons label {
+    cursor: pointer;
+    z-index: 1;
+    width: 40%;
+    color: #fff;
+    position: absolute;
+    text-align: center;}
+.radio-buttons .slider {
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    background: #0066ff;
+    border-radius: 50px;
+    transition: all 0.4s ease;}
+.radio-buttons .first:checked ~ .slider {left: 4%; bottom: 55%;}
+.radio-buttons .second:checked ~ .slider {left: 36%; bottom: 55%;}
+.radio-buttons .third:checked ~ .slider {left: 64%; bottom: 55%;}
+.radio-buttons .forth:checked ~ .slider {left: 4%; bottom: 10%;}
+.radio-buttons .fith:checked ~ .slider {left: 34%; bottom: 10%}
+.radio-buttons .sixth:checked ~ .slider {left: 64%; bottom: 10%;}
+div.center.grid-option div label:nth-child(2) {top: 15%; left: 0%}
+div.center.grid-option div label:nth-child(4) {top: 15%; left: 30%;}
+div.center.grid-option div label:nth-child(6) {top: 15%; left: 60%;}
+div.center.grid-option div label:nth-child(8) {bottom: 15%; left: 0%;}
+div.center.grid-option div label:nth-child(10) {bottom: 15%; left: 30%;}
+div.center.grid-option div label:nth-child(12) {bottom: 15%; left: 60%;}
+/*
+            88
+            88                                       ,d
+            88                                       88
+,adPPYYba,  88,dPPYba,    ,adPPYba,   88       88  MM88MMM
+""     `Y8  88P'    "8a  a8"     "8a  88       88    88
+,adPPPPP88  88       d8  8b       d8  88       88    88
+88,    ,88  88b,   ,a8"  "8a,   ,a8"  "8a,   ,a88    88,
+`"8bbdP"Y8  8Y"Ybbd8"'    `"YbbdP"'    `"YbbdP'Y8    "Y888
+*/
+.about, .about a {
+    text-decoration: none;
+    position: relative;
+    display: inline;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;}
+.about a, .about a:visited {
+    text-decoration: none;
+    position: relative;}
+.about a:hover, .about a:visited:hover {
+    color: #ffffff;
+    transition: 1s;}
+.about a:not(hover), .about a:visited:not(hover) {
+    color: rgba(255, 255, 255, 0.6);
+    transition: 1s;}
+.about a:after, .about a:visited:after {
+    content: '';
+    height: 4px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    border-radius: 25px;
+    width: 0%;
+    background: #0066ff;
+    transition: 0.4s;}
+.about a:hover:after, .about a:visited:hover:after {
+    width: 100%;}
+.about a.block, .about a:visited.block {
+    display: block;
+    padding: 0.5em;}
+.about a.block:hover, .about a:visited.block:hover {
+    background: #ffffff;}
+/*
+   ad88
+  d8"                              ,d
+  88                               88
+MM88MMM  ,adPPYba,    ,adPPYba,  MM88MMM  ,adPPYba,  8b,dPPYba,
+  88    a8"     "8a  a8"     "8a   88    a8P_____88  88P'   "Y8
+  88    8b       d8  8b       d8   88    8PP"""""""  88
+  88    "8a,   ,a8"  "8a,   ,a8"   88,   "8b,   ,aa  88
+  88     `"YbbdP"'    `"YbbdP"'    "Y888  `"Ybbd8"'  88
+*/
+.footer {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    height: 60%;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 15px;}
