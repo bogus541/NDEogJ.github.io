@@ -198,7 +198,7 @@ a8"     "8a  88P'   "Y8  a8"    `Y88  a8P_____88  88P'   "Y8
 */
 .radio-buttons {
     position: relative;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.05);
     border-radius: 50px;
     width: 70%;
     height: 50%;
