@@ -30,5 +30,20 @@ def parse():
     print(f"Cid   -- {cid}")
 
 
+def GETv():
+    req = ajax.ajax()
+    req.bind('complete', on_complete)
+    req.open('GET', url, True)
+    req.set_header('content-type', 'application/x-www-form-urlencoded')
+    req.send()
+
+
+def starter():
+    if vorc == None: return
+    if vorc == "v": GETv()
+    if vorc == "c": GETc()
+
+
 def run():
     parse()
+    starter()
