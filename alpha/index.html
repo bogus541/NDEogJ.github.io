@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="bogus541" content="bogus541">
+        <meta name="theme-color" content="#212121">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Clever | Applications</title>
         <link rel="icon" href="https://clever.com/favicon.ico" type="image/gif" sizes="16x16">
@@ -16,11 +17,10 @@
     <body onload="brython({debug:1})">
         <script type="text/python">
             from browser import document as doc
-            from browser import ajax, html, window, run_script
+            from browser import ajax, html, window
             import json
-            import javascript as js
-            from testt import *
-            go()
+            from pyscript import *
+            run()
         </script>
         <div class="grid-container">
 
@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="center grid-footer footer">
+            <div id="footer" class="center grid-footer footer">
                 This site is purely for educational purposes only.
                 I do not condone the use of this site.
                 I am not responsible for any consequences received from the use of this site.
