@@ -13,7 +13,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.6.2/brython_stdlib.js"></script>
     </head>
 
-    <body onload="brython({debug:0})">
+    <body onload="brython({debug:1})">
+        <script type="text/python">
+            from browser import document as doc
+            from browser import ajax, html, window, run_script
+            import json
+            import javascript as js
+            import testt
+            go()
+        </script>
         <div class="grid-container">
 
             <div class="grid-header">
