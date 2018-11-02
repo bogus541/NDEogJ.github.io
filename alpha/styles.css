@@ -48,7 +48,7 @@ a8"    `Y88  88P'   "Y8  88  a8"    `Y88
     bottom: 0%;
     height: 100%;
     grid-template-columns: auto;
-    grid-template-rows: 10% 10% 22% 10% 20% 20% 8%;
+    grid-template-rows: 10% 10% 22% 10% fit-content auto 8%;
     grid-template-areas:
         "...... header header header ......"
         "...... ...... ...... ...... ......"
