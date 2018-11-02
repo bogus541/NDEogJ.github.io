@@ -40,14 +40,6 @@ def parse():
     global page
     try:
         page = doc.query["page"]
-        doc["main"].html = "<div class='grid-header'><script></script></div>" \
-                           "function header() {" \
-                           "var div= document.getElementsByTagName('grid-header')[0];" \
-                           "var script= document.createElement('script');" \
-                           "script.type= 'text/javascript';" \
-                           "script.src= 'header.js';" \
-                           "div.appendChild(script);}" \
-                           "header();"
     except KeyError:
         page = None
     print(f"Page  -- {page}")
