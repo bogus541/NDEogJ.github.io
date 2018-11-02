@@ -127,5 +127,5 @@ def DONEv2(req):
             vLIKES = video["statistics"]["likeCount"]
             vDISLIKES = video["statistics"]["dislikeCount"]
             print(f"{vID} -- VIDEO -- {vTITLE}")
-            doc["main"].html += f"<li><p>{vID} -- VIDEO -- {vTITLE}</p></li>"
+            doc["list"].html += f"<li><p>{vID} -- VIDEO -- {vTITLE}</p></li>"
         doc["list"].html += "</ul>"
