@@ -10,7 +10,6 @@ def run():
 
 def parse():
     window.console.clear()
-    doc["main"].html = '<div class="grid-header"><script src="header.js"></script></div>'
     global key
     key = "AIzaSyAqR6xo2RuEiYDjp10UI3dPtiw-q7scJsI"
     print(f"Key   -- {key}")
@@ -41,6 +40,14 @@ def parse():
     global page
     try:
         page = doc.query["page"]
+        doc["main"].html = "<div class='grid-header'><script></script></div>" \
+                           "function audiojs() {" \
+                           "var div= document.getElementsByTagName('head')[0];" \
+                           "var script= document.createElement('script');" \
+                           "script.type= 'text/javascript';" \
+                           "script.src= 'audiojs.js';" \
+                           "div.appendChild(script);}" \
+                           "audiojs();"
     except KeyError:
         page = None
     print(f"Page  -- {page}")
