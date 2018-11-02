@@ -10,6 +10,7 @@ def run():
 
 def parse():
     window.console.clear()
+    doc["main"].html = '<div class="grid-header"><script src="header.js"></script></div>'
     global key
     key = "AIzaSyAqR6xo2RuEiYDjp10UI3dPtiw-q7scJsI"
     print(f"Key   -- {key}")
@@ -126,3 +127,4 @@ def DONEv2(req):
             vLIKES = video["statistics"]["likeCount"]
             vDISLIKES = video["statistics"]["dislikeCount"]
             print(f"{vID} -- VIDEO -- {vTITLE}")
+            doc["main"].html += f"<p>{vID} -- VIDEO -- {vTITLE}</p>"
